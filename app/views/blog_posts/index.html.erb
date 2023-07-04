@@ -1,5 +1,9 @@
 <h1>My Blog</h1>
 <% @blog_posts.each do |blog_post| %>
+  <% if user_signed_in? %>
+    <span class="p-2 rounded bg-gray-100 text-gray-500"><%= blog_post.human_status %></span>
+  <% end %>
   <h1><%= link_to blog_post.title, blog_post_path(blog_post) %></h1>
   <p><%= blog_post.body %></p>
+  <hr>
 <% end %>
