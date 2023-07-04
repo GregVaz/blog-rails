@@ -11,8 +11,6 @@ class BlogPostsController < ApplicationController
   end
 
   def show
-  # rescue ActiveRecord::RecordNotFound
-    # redirect_to root_path
   end
 
   def create
